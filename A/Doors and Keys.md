@@ -1,4 +1,4 @@
-# [A. Doors and Keys](https://codeforces.com/contest/1644/problem/A)
+# A. Doors and Keys
 
 > time limit per test: 2 seconds
 >
