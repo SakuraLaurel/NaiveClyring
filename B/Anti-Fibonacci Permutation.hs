@@ -2,7 +2,7 @@
 -- origin: https://codeforces.com/contest/1644/submission/147286507
 
 import Control.Monad.State (State, evalState, replicateM, state)
-import Data.Bifunctor (Bifunctor (first))
+import Data.Bifunctor (first)
 import Data.Char (isDigit, isSpace)
 import Data.List (permutations)
 
@@ -14,8 +14,7 @@ getInt :: State [Char] Int
 getInt = state (first (\x -> read x :: Int) . span isDigit . dropWhile isSpace)
 
 putInts :: [Int] -> [Char]
-putInts [] = "\n"
-putInts (x : xs) = show x ++ concatMap (\y -> ' ' : show y) xs ++ "\n"
+putInts x = unwords (map show x) ++ "\n"
 
 mainFunc :: State [Char] [[Char]]
 mainFunc = do
